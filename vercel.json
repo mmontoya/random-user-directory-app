@@ -1,5 +1,4 @@
 {
-
   "version": 2,
   "builds": [
     {
@@ -7,7 +6,6 @@
       "use": "@now/node"
     }
   ],
-   "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }],
    "routes": [
     {
       "src": "/(.*)",
