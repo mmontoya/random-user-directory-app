@@ -2,11 +2,11 @@
   "name": "amex-express-next-user-directory",
   "version": "1.0.0",
   "description": "Serverside Rendered User Directory in React",
-  "main": "server.js",
+  "main": "index.js",
   "engine": "18.x",
   "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
