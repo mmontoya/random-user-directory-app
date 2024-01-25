@@ -1,5 +1,30 @@
 @import "./variables.module.scss";
 
+.offline {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: left;
+
+}
+
+.offlineListContainer {
+   margin-top: 60px;
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: left;
+    gap: 10px;
+    height: 490px;
+    overflow-y: scroll;;
+}
+
 .userListContainer {
     margin-top: 60px;
     display: flex;

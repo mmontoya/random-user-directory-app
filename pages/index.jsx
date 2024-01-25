@@ -1,52 +1,39 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import UserListItem from '../components/UserListItem';
-import userlist from '../styles/userlist.module.scss';
+// pages/index.js
+import React from 'react';
+import Layout from './layout';
+import Home from './home';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-const SEED = process.env.NEXT_PUBLIC_RANDOM_SEED;
-
-const Home = ({ users, info }) => {
-  console.log('Base Url is:', BASE_URL);
-  console.log('seed is:', info.seed);
-
+const HomePage = ({ serverOnlineStatus, users }) => {
+  console.log('The status', serverOnlineStatus);
   return (
-    <>
-      <Head>
-        <title>Amex User Directory</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main>
-        <div className={userlist.userListContainer}>
-          {users.map((user) => (
-            <Link
-              href={`/userDetail?id=${user.login.uuid}`}
-              key={user.login.uuid}
-            >
-              <UserListItem user={user} />
-            </Link>
-          ))}
-        </div>
-      </main>
-    </>
+    <Layout serverOnlineStatus={serverOnlineStatus}>
+      <Home users={users} />
+    </Layout>
   );
 };
 
+export default HomePage;
+
 export async function getServerSideProps() {
-  // Fetch the data from API
-  const response = await fetch(`${BASE_URL}?results=10&seed=${SEED}&nat=US`);
-  const data = await response.json();
-  const users = data.results;
-  const info = data.info;
+  try {
+    const response = await fetch('http://localhost:3000/api/users');
+    const serverStatusHeader = response.headers.get('X-Online-Status');
+    const serverOnlineStatus = serverStatusHeader || 'unknown';
 
-  // Pass the data as props to the component
+    const users = await response.json();
 
-  return {
-    props: {
-      users,
-      info,
-    },
-  };
+    return {
+      props: {
+        serverOnlineStatus,
+        users,
+      },
+    };
+  } catch (error) {
+    console.log('Server error getting connectivity');
+    return {
+      props: {
+        serverOnlineStatus: 'unknown',
+      },
+    };
+  }
 }
-
-export default Home;

@@ -1,5 +1,6 @@
 import header from '../styles/header.module.scss';
-const Header = () => {
+
+const Header = ({ onlineStatus }) => {
   return (
     <div className={header.main}>
       <img
@@ -9,6 +10,17 @@ const Header = () => {
         height={'50px'}
       />
       Random User Directory
+      <div className={header.status}>
+        <div
+          className={header.lightIndicator}
+          style={{
+            backgroundColor: `${onlineStatus === 'offline' ? 'red' : 'limegreen'}`,
+          }}
+        >
+          &nbsp;
+        </div>
+        {onlineStatus === 'offline' ? 'offline' : 'online'}
+      </div>
     </div>
   );
 };
