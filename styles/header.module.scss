@@ -15,3 +15,32 @@
     position: fixed;
     top: 0;
 }
+
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: 10px;
+    padding: 8px 10px;
+    font-size: .70em;
+    background-color: $color-base-signature-shades-slate-grey-800;
+    border-radius: 20px;
+}
+
+.lightIndicator {
+    margin-top: 2px;
+    margin-right: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.online {
+  background-color: limegreen;
+}
+
+.offline {
+  background-color: red;
+}

@@ -48,6 +48,7 @@ v16.20.2
 The application relies on the following variables to be set in an `.env` file in the root of the project:
 
 `NEXT_PUBLIC_API_URL`=https://randomuser.me/api
+
 `NEXT_PUBLIC_RANDOM_SEED`=<SEED_VALUE>
 
 The seed can any string,and is used by the api to provide consistent results, which is necessary for the correct functioning of the app.
@@ -65,6 +66,11 @@ Once all the dependencies have been successfully downloaded, type:
 #### `npm run start`
 
 The project will run on localhost:3000
+
+## Bonus
+
+### Offline Mode
+I implemented an offline browsing mode by serving a cached version of the query from the Express server, when there is no connectivity. To make it obvious that we are working in an "offline" context, I included a generic image instead of the one that is associated with the online version. I also changed the seed value so that it is a different set of people than when we are online.
 
 ## Thank You!
 

@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import usercard from '../styles/usercard.module.scss';
 import userdetail from '../styles/userdetail.module.scss';
 import Link from 'next/link';
+import { fetchData } from '../utils/FetchData';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 const SEED = process.env.NEXT_PUBLIC_RANDOM_SEED;
@@ -10,7 +11,6 @@ const SEED = process.env.NEXT_PUBLIC_RANDOM_SEED;
 const UserDetail = ({ users }) => {
   const router = useRouter();
   const id = router.query.id;
-
   const user = users.filter((user) => user.login.uuid === id)[0];
 
   return (
@@ -30,15 +30,12 @@ const UserDetail = ({ users }) => {
 export default UserDetail;
 
 export async function getServerSideProps() {
-  // Fetch the data from API
-  const response = await fetch(`${BASE_URL}?results=10&seed=${SEED}&nat=US`);
-  const data = await response.json();
-  const users = data.results;
+  const url = 'http://localhost:3000/api/users';
+  const options = {}; // You can add headers or other options here
 
-  // Pass the data as props to the component
   return {
     props: {
-      users,
+      users: await fetchData(url, options),
     },
   };
 }

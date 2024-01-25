@@ -1,11 +1,12 @@
+import React from 'react';
 import page from '../styles/layout.module.scss';
 import Header from '../components/Header';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, serverOnlineStatus }) => {
   return (
     <>
       <div className={page.pageWrapper}>
-        <Header />
+        <Header onlineStatus={serverOnlineStatus} />
         <div>{children}</div>
       </div>
     </>

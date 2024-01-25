@@ -1,17 +1,34 @@
 import express from 'express';
 import next from 'next';
 import dotenv from 'dotenv';
-import asyncHandler from 'express-async-handler';
+//import asyncHandler from 'express-async-handler';
 import fetch from 'node-fetch';
+import fs from 'fs';
+import path from 'path';
+
+const __dirname = path.resolve();
+const basePathToData = path.join(__dirname, '/data');
+
+const getJsonData = (basePathToData, filename) => {
+  let url = path.join(basePathToData, filename);
+  return JSON.parse(fs.readFileSync(url, 'utf-8'));
+};
+
+const checkInternetConnectivity = async () => {
+  try {
+    const response = await fetch('https://www.google.com', { method: 'HEAD' });
+    return response.ok;
+  } catch (error) {
+    return false;
+  }
+};
 
 dotenv.config();
 const dev = process.env.NODE_ENV !== 'production';
-
-const SEED = process.env.NEXT_PUBLIC_RANDOM_SEED;
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+const SEED = process.env.NEXT_PUBLIC_RANDOM_SEED;
 
 console.log('The API is at:', process.env.NEXT_PUBLIC_API_URL);
-
 console.log('The seed is', process.env.NEXT_PUBLIC_RANDOM_SEED);
 
 const app = next({ dev });
@@ -19,6 +36,19 @@ const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
   const server = express();
+
+  server.use(async (req, res, next) => {
+    try {
+      // Check if the server has internet connectivity
+      const isOnline = await checkInternetConnectivity();
+      res.setHeader('X-Online-Status', isOnline ? 'online' : 'offline');
+      next();
+    } catch (error) {
+      console.error('Error checking online status:', error);
+      res.setHeader('X-Online-Status', 'unknown');
+      next();
+    }
+  });
 
   // LOCAL CALLS
 
@@ -37,14 +67,35 @@ app.prepare().then(() => {
   });
 
   // API CALLS
-  server.get('/api/users', (req, res) => {
-    const users = [
-      { id: 1, name: 'James' },
-      { id: 2, name: 'Carl' },
-      { id: 3, name: 'Nina' },
-    ];
 
-    res.status(200).json({ users });
+  server.get('/api/users', async (req, res) => {
+    try {
+      // Check if the server has internet connectivity
+      const isOnline = await checkInternetConnectivity();
+      const url = `${BASE_URL}?results=10&seed=${SEED}&nat=US`;
+
+      if (isOnline) {
+        const response = await fetch(url);
+        const data = await response.json();
+        const results = data.results;
+        res.status(200).json(results);
+      } else {
+        const { results } = await getJsonData(basePathToData, 'data.json');
+        const noavatar = results.map((user) => ({
+          ...user,
+          picture: {
+            large: '/images/generic_user_lg.jpg',
+            medium: '/images/generic_user_md.jpg',
+            thumbnail: '/images/generic_user_thumb.jpg',
+          },
+        }));
+        //console.log(noavatar);
+        res.status(200).json(noavatar);
+      }
+    } catch (error) {
+      console.error('Error fetching users:', error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
   });
 
   server.get('/api/user/:id', async (req, res) => {

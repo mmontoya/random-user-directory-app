@@ -1,0 +1,570 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Miss",
+                "first": "Madison",
+                "last": "Steeves "
+            },
+            "location": {
+                "street": {
+                    "number": 4620,
+                    "name": "Adams St"
+                },
+                "city": "Santa Maria",
+                "state": "California",
+                "country": "United States",
+                "postcode": 25091,
+                "coordinates": {
+                    "latitude": "-70.1544",
+                    "longitude": "169.6189"
+                },
+                "timezone": {
+                    "offset": "+7:00",
+                    "description": "Bangkok, Hanoi, Jakarta"
+                }
+            },
+            "email": "madison.steeves@example.com",
+            "login": {
+                "uuid": "ad4d70c1-2b79-4dbb-9e34-f98ae8179d78",
+                "username": "goldenzebra621",
+                "password": "carver",
+                "salt": "SBK3UQ14",
+                "md5": "44be1e00e222db34ec291f21b8966881",
+                "sha1": "f53e56febfd2df44c5878522603eb0b552a538c3",
+                "sha256": "7006a797266d92d3deb2dde12c639c862dd8bc303c08ca069715a52c9baf5876"
+            },
+            "dob": {
+                "date": "1973-11-06T19:10:53.115Z",
+                "age": 50
+            },
+            "registered": {
+                "date": "2015-04-07T20:08:00.545Z",
+                "age": 8
+            },
+            "phone": "(604) 684-5889",
+            "cell": "(280) 811-6517",
+            "id": {
+                "name": "SSN",
+                "value": "516-63-2443"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/87.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/87.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/87.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Miss",
+                "first": "Ava",
+                "last": "Adams"
+            },
+            "location": {
+                "street": {
+                    "number": 9731,
+                    "name": "Locust Rd"
+                },
+                "city": "Huntsville",
+                "state": "Michigan",
+                "country": "United States",
+                "postcode": 54718,
+                "coordinates": {
+                    "latitude": "55.5048",
+                    "longitude": "136.9025"
+                },
+                "timezone": {
+                    "offset": "-7:00",
+                    "description": "Mountain Time (US & Canada)"
+                }
+            },
+            "email": "ava.adams@example.com",
+            "login": {
+                "uuid": "f1d0c21a-82c9-42aa-8377-4d91003f7667",
+                "username": "orangelion347",
+                "password": "shawna",
+                "salt": "bOUKqtTV",
+                "md5": "27b1c3914eb858c215066669482d439d",
+                "sha1": "df12531fed42a0f11e64a50da137282caf867dc2",
+                "sha256": "d9557b0e8055731b71edc0b58e8d3681c1a401f0988732828f0ea0b5a393e412"
+            },
+            "dob": {
+                "date": "1994-12-02T18:53:58.227Z",
+                "age": 29
+            },
+            "registered": {
+                "date": "2007-05-09T10:02:17.295Z",
+                "age": 16
+            },
+            "phone": "(567) 820-6345",
+            "cell": "(891) 370-5263",
+            "id": {
+                "name": "SSN",
+                "value": "867-04-8425"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/4.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/4.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/4.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Felicia",
+                "last": "Wagner"
+            },
+            "location": {
+                "street": {
+                    "number": 284,
+                    "name": "Woodland St"
+                },
+                "city": "Los Angeles",
+                "state": "Wyoming",
+                "country": "United States",
+                "postcode": 33118,
+                "coordinates": {
+                    "latitude": "-85.6207",
+                    "longitude": "53.7646"
+                },
+                "timezone": {
+                    "offset": "+3:30",
+                    "description": "Tehran"
+                }
+            },
+            "email": "felicia.wagner@example.com",
+            "login": {
+                "uuid": "c945bcc9-94e4-4079-8c40-a679cf12c193",
+                "username": "biggoose962",
+                "password": "snuffy",
+                "salt": "JGxL1Twd",
+                "md5": "9e0b96414464f6ba24e0bc16994a3697",
+                "sha1": "b73205d49e6a526aad1ec316c81c7e6d33170ff0",
+                "sha256": "ad86789ebef3368e0f77dc9ebe1c978e56c5ec8036a6dd0745f09e1f76036c35"
+            },
+            "dob": {
+                "date": "1961-01-01T14:39:05.754Z",
+                "age": 63
+            },
+            "registered": {
+                "date": "2018-05-30T03:22:17.544Z",
+                "age": 5
+            },
+            "phone": "(433) 814-8087",
+            "cell": "(406) 302-2091",
+            "id": {
+                "name": "SSN",
+                "value": "029-33-4561"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/5.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/5.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/5.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "Mr",
+                "first": "Troy",
+                "last": "Hansen"
+            },
+            "location": {
+                "street": {
+                    "number": 4459,
+                    "name": "Ranchview Dr"
+                },
+                "city": "Jersey City",
+                "state": "Massachusetts",
+                "country": "United States",
+                "postcode": 23636,
+                "coordinates": {
+                    "latitude": "30.9553",
+                    "longitude": "-56.6278"
+                },
+                "timezone": {
+                    "offset": "-2:00",
+                    "description": "Mid-Atlantic"
+                }
+            },
+            "email": "troy.hansen@example.com",
+            "login": {
+                "uuid": "c9b17d63-85d5-4e79-8f8f-49859db50d15",
+                "username": "orangebear272",
+                "password": "disney",
+                "salt": "cKzREC0L",
+                "md5": "fa77ae09caa32eaadfc23bde9a418199",
+                "sha1": "aba54f83acbafec07a5bb7f1cfd254bf2124a074",
+                "sha256": "482bd682bb261fd88687363172a3994b7f0ea4774aed42a2c00f8ee8e06a5368"
+            },
+            "dob": {
+                "date": "1966-07-08T03:21:48.507Z",
+                "age": 57
+            },
+            "registered": {
+                "date": "2011-06-22T19:45:25.127Z",
+                "age": 12
+            },
+            "phone": "(432) 743-2944",
+            "cell": "(263) 500-7857",
+            "id": {
+                "name": "SSN",
+                "value": "772-84-7559"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/men/33.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/men/33.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/men/33.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Marion",
+                "last": "Cox"
+            },
+            "location": {
+                "street": {
+                    "number": 4058,
+                    "name": "Cherry St"
+                },
+                "city": "Grand Rapids",
+                "state": "Ohio",
+                "country": "United States",
+                "postcode": 32914,
+                "coordinates": {
+                    "latitude": "82.5827",
+                    "longitude": "-76.2753"
+                },
+                "timezone": {
+                    "offset": "0:00",
+                    "description": "Western Europe Time, London, Lisbon, Casablanca"
+                }
+            },
+            "email": "marion.cox@example.com",
+            "login": {
+                "uuid": "c0565d27-c1dc-450a-a034-0f1f66505436",
+                "username": "whitesnake304",
+                "password": "moonshin",
+                "salt": "mN8aRegn",
+                "md5": "4871460393944482b8306f064af26009",
+                "sha1": "8d813a4c3c3ceb224f4a12b7ce5c0a02ffba29f8",
+                "sha256": "adc4784bafb0541c19b508304adcf176d17f6882b074528d769f792af6880c3b"
+            },
+            "dob": {
+                "date": "1993-02-05T06:52:14.973Z",
+                "age": 30
+            },
+            "registered": {
+                "date": "2013-01-20T01:40:39.044Z",
+                "age": 11
+            },
+            "phone": "(912) 706-9266",
+            "cell": "(937) 841-5310",
+            "id": {
+                "name": "SSN",
+                "value": "510-16-3963"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/65.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/65.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/65.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Miss",
+                "first": "Brandy",
+                "last": "Mason"
+            },
+            "location": {
+                "street": {
+                    "number": 3728,
+                    "name": "Hamilton Ave"
+                },
+                "city": "Mesa",
+                "state": "Connecticut",
+                "country": "United States",
+                "postcode": 19456,
+                "coordinates": {
+                    "latitude": "-86.5388",
+                    "longitude": "-102.7561"
+                },
+                "timezone": {
+                    "offset": "+6:00",
+                    "description": "Almaty, Dhaka, Colombo"
+                }
+            },
+            "email": "brandy.mason@example.com",
+            "login": {
+                "uuid": "f4579929-2f56-47b7-a209-6b77f9480367",
+                "username": "greensnake898",
+                "password": "loulou",
+                "salt": "z0vKJqJK",
+                "md5": "3c8ca9608a194acb6720f24d57a908f6",
+                "sha1": "ee3d54323668e62db9fac73ccb1ddf3fb861b3dc",
+                "sha256": "480cf86ce49cf1cb05d40270bd99759b71ebb02aa604192856261e40624f0a1b"
+            },
+            "dob": {
+                "date": "1993-08-23T07:56:50.388Z",
+                "age": 30
+            },
+            "registered": {
+                "date": "2011-05-22T23:25:47.890Z",
+                "age": 12
+            },
+            "phone": "(531) 204-6922",
+            "cell": "(317) 251-5747",
+            "id": {
+                "name": "SSN",
+                "value": "492-10-7746"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/12.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/12.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/12.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Courtney",
+                "last": "Simmons"
+            },
+            "location": {
+                "street": {
+                    "number": 1812,
+                    "name": "Groveland Terrace"
+                },
+                "city": "Manchester",
+                "state": "Georgia",
+                "country": "United States",
+                "postcode": 62127,
+                "coordinates": {
+                    "latitude": "-29.8946",
+                    "longitude": "-66.1450"
+                },
+                "timezone": {
+                    "offset": "+1:00",
+                    "description": "Brussels, Copenhagen, Madrid, Paris"
+                }
+            },
+            "email": "courtney.simmons@example.com",
+            "login": {
+                "uuid": "63b654f7-70a6-4710-bd9b-bb3c7c89f59a",
+                "username": "crazyduck146",
+                "password": "bbbbb",
+                "salt": "40ZY9mha",
+                "md5": "f14cad51eabac7bed0a905999c92d4ce",
+                "sha1": "3044f2fc4ff91a60c1048e2100d0d014a1333a7f",
+                "sha256": "01d682818a0e6927efb7de5d2fb86410ea18b2a14daf332783e028d8967c74a2"
+            },
+            "dob": {
+                "date": "1971-09-26T17:38:58.335Z",
+                "age": 52
+            },
+            "registered": {
+                "date": "2020-08-16T16:21:34.950Z",
+                "age": 3
+            },
+            "phone": "(480) 674-4970",
+            "cell": "(290) 683-7649",
+            "id": {
+                "name": "SSN",
+                "value": "184-13-6874"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/19.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/19.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/19.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Miss",
+                "first": "Nora",
+                "last": "Gonzales"
+            },
+            "location": {
+                "street": {
+                    "number": 6787,
+                    "name": "Lakeshore Rd"
+                },
+                "city": "Rancho Cucamonga",
+                "state": "Alaska",
+                "country": "United States",
+                "postcode": 56073,
+                "coordinates": {
+                    "latitude": "-59.3162",
+                    "longitude": "44.9623"
+                },
+                "timezone": {
+                    "offset": "-12:00",
+                    "description": "Eniwetok, Kwajalein"
+                }
+            },
+            "email": "nora.gonzales@example.com",
+            "login": {
+                "uuid": "6615b43a-f0b1-4139-ac3d-8ae24b1ae4aa",
+                "username": "whitepanda659",
+                "password": "austin31",
+                "salt": "xFCTJ6IY",
+                "md5": "26750b1363153d3f5985b7d3f58a2990",
+                "sha1": "2164023a8d48550c90ffd01402189b7db6ad8fba",
+                "sha256": "2cae21ebd9ac33dcb354ec9bbd8f65de3cca6bb236a5355d58045e446e386a47"
+            },
+            "dob": {
+                "date": "1981-02-17T22:43:38.021Z",
+                "age": 42
+            },
+            "registered": {
+                "date": "2015-12-16T07:19:20.199Z",
+                "age": 8
+            },
+            "phone": "(725) 499-8704",
+            "cell": "(224) 224-7937",
+            "id": {
+                "name": "SSN",
+                "value": "321-95-9163"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/19.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/19.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/19.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "female",
+            "name": {
+                "title": "Ms",
+                "first": "Beverly",
+                "last": "Pearson"
+            },
+            "location": {
+                "street": {
+                    "number": 6997,
+                    "name": "Eason Rd"
+                },
+                "city": "Visalia",
+                "state": "Iowa",
+                "country": "United States",
+                "postcode": 30485,
+                "coordinates": {
+                    "latitude": "77.6713",
+                    "longitude": "-69.7593"
+                },
+                "timezone": {
+                    "offset": "0:00",
+                    "description": "Western Europe Time, London, Lisbon, Casablanca"
+                }
+            },
+            "email": "beverly.pearson@example.com",
+            "login": {
+                "uuid": "bc628521-8212-4a5e-a6fe-284c558216f5",
+                "username": "happygoose578",
+                "password": "cheeks",
+                "salt": "Utl0w90B",
+                "md5": "687839779a860af2f47a069e05a30a30",
+                "sha1": "fa5b0b7881996bbdd77e93162ed2e2f362b40c06",
+                "sha256": "091eed44568735b624ed23445e154c299724ffa00f27d169655a132edc29d85a"
+            },
+            "dob": {
+                "date": "1953-10-08T16:36:42.399Z",
+                "age": 70
+            },
+            "registered": {
+                "date": "2020-11-12T05:27:40.026Z",
+                "age": 3
+            },
+            "phone": "(711) 217-7368",
+            "cell": "(905) 711-8727",
+            "id": {
+                "name": "SSN",
+                "value": "490-80-5794"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/45.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/45.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/45.jpg"
+            },
+            "nat": "US"
+        },
+        {
+            "gender": "male",
+            "name": {
+                "title": "Mr",
+                "first": "Lester",
+                "last": "Mckinney"
+            },
+            "location": {
+                "street": {
+                    "number": 5596,
+                    "name": "Pecan Acres Ln"
+                },
+                "city": "Knoxville",
+                "state": "Mississippi",
+                "country": "United States",
+                "postcode": 34985,
+                "coordinates": {
+                    "latitude": "16.9778",
+                    "longitude": "26.2516"
+                },
+                "timezone": {
+                    "offset": "+4:00",
+                    "description": "Abu Dhabi, Muscat, Baku, Tbilisi"
+                }
+            },
+            "email": "lester.mckinney@example.com",
+            "login": {
+                "uuid": "49985ded-7275-4210-baf3-432c0828b7c7",
+                "username": "brownfrog513",
+                "password": "massage",
+                "salt": "5AIcNo5w",
+                "md5": "06cef495d6eb89c34daf25e33d53dd0e",
+                "sha1": "bf2f046eefec9fa6599f6321ddbae6a5e56386e3",
+                "sha256": "bd57598ed34e4e311d55ef126c7fb52ad0bab3a9dcba2c6b5b8b915721702fff"
+            },
+            "dob": {
+                "date": "1986-11-17T20:37:58.819Z",
+                "age": 37
+            },
+            "registered": {
+                "date": "2010-11-24T19:44:51.763Z",
+                "age": 13
+            },
+            "phone": "(740) 377-5139",
+            "cell": "(828) 597-1067",
+            "id": {
+                "name": "SSN",
+                "value": "441-73-3895"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/men/69.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/men/69.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/men/69.jpg"
+            },
+            "nat": "US"
+        }
+    ],
+    "info": {
+        "seed": "jaasdfasdfsdfynasdy",
+        "results": 10,
+        "page": 1,
+        "version": "1.4"
+    }
+}
