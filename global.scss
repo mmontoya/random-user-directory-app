@@ -1,0 +1,78 @@
+
+@font-face {
+  font-family: "Core Sans C Regular";
+  src: url("./assets/fonts/CoreSansC-45Regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Sans C Bold";
+  src: url("./assets/fonts/CoreSansC-65Bold.woff2") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Core Sans C Regular Italic";
+  src: url("./assets/fonts/CoreSansC-45RegularIt.woff2") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Core Sans C Bold Italic";
+  src: url("./assets/fonts/CoreSansC-65BoldIt.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+    user-select: none;
+    box-sizing: border-box;
+    font-family: "Core Sans C Regular";
+    padding: 0;
+    margin: 0;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #0088ff;
+    &:hover {
+        color:#1486e4;
+    }
+    &:active {
+        color: #ad4210;
+    }
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+div {
+  /* width */
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #d2dae5;
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a2d8ce;
+  }
+}

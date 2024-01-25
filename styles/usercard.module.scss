@@ -1,0 +1,74 @@
+@import "../styles/variables.module.scss";
+
+
+.displayCardContainer {
+    display: flex;
+    background-color: $color-base-signature-shades-slate-grey-600;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    width: 400px;
+    justify-content: center;
+    filter: drop-shadow(5px 5px 5px #3232366d);
+    margin-top: 100px;
+}
+.thumbnail {
+    border-radius: 50%;
+}
+
+.portrait {
+    border-radius: 12px;
+    width: 160px;
+    height: 160px;
+    border: 1px rgba(255, 255, 255, 0.309) solid;
+}
+
+.firstRow {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.addressContainer {
+    color: $color-base-signature-shades-slate-grey-300;
+    display: flex;
+    flex-direction: column;
+    font-size:.85em;
+    gap: 1px;
+}
+
+.identity{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.userName {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: $color-base-white;
+    padding-bottom: 10px;
+}
+
+.contactInfo {
+    padding-top: 10px;
+    font-size: .72em;
+    color: $color-base-signature-shades-mint-green-200
+}
+
+.secondRow {
+    display: flex;
+    flex-direction: row;
+    font-size: .65em;
+    padding-top: 10px;
+    width: 160px;
+    color: $color-base-signature-shades-slate-grey-200;
+}
+
+.ageInfo {
+    margin-left:auto;
+    padding-left: 40px;
+
+}

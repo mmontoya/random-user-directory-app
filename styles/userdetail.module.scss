@@ -1,0 +1,17 @@
+@import "../styles/variables.module.scss";
+
+.link {
+    background-color: $color-base-signature-shades-slate-grey-50;
+    color: $color-base-signature-shades-slate-grey-400;
+    padding: 10px;
+    font-size: .85rem;
+    border-radius: 8px;
+
+    &:hover {
+        color:$color-messaging-hyperlink-blue;
+    }
+    &:active{
+        color: $color-data-viz-orange-115;
+
+    }
+}

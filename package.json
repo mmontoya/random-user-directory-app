@@ -1,0 +1,39 @@
+{
+  "name": "amex-express-next-user-directory",
+  "version": "1.0.0",
+  "description": "Serverside Rendered User Directory in React",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mmontoya/amex-express-next-user-directory.git"
+  },
+  "keywords": [
+    "directory",
+    "express",
+    "next"
+  ],
+  "author": "Michael Montoya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmontoya/amex-express-next-user-directory/issues"
+  },
+  "homepage": "https://github.com/mmontoya/amex-express-next-user-directory#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3",
+    "dotenv": "^16.4.0",
+    "express-async-handler": "^1.2.0",
+    "next": "^14.1.0",
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "prettier": "^3.2.4"
+  }
+}
