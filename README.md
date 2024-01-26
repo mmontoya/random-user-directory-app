@@ -76,10 +76,15 @@ Then
 
 The project will run on localhost:3000
 
-## Bonus
+## Bonus Features
 
 ### Offline Mode
 I implemented an offline browsing mode by serving a cached version of the live query that I have saved in a JSON file. To make it obvious that we are working in an "offline" context, I included a generic image instead of the one that is associated with the online version. Please note that in order to test this feature, you will need to be running the app in a local environment. You will then be able to verify that it continues to serve data by disabling your internet connection and _refreshing_ the page.
+
+### Internationalization (i18n)
+
+I implemented internationalization capabilites, adding support for Spanish. To see it in action, simply append the locale for Spanish ("es") to the end of the URL (before any parameters). The title on the Header bar as well as the "back" button, should be translated to Spanish.
+
 
 ## Thank You!
 
