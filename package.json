@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Serverside Rendered User Directory in React",
   "main": "index.js",
+  "main": "index.js",
   "engine": "18.x",
   "type": "module",
   "scripts": {
