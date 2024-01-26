@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import UserListItem from '../components/UserListItem';
-import userlist from '../styles/userlist.module.scss';
+import userlist from '../styles/Userlist.module.scss';
 
 const UserList = ({ users }) => {
   return (
