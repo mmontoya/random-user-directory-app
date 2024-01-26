@@ -14,12 +14,12 @@ const Header = ({ onlineStatus }) => {
         <div
           className={header.lightIndicator}
           style={{
-            backgroundColor: `${onlineStatus === 'offline' ? 'red' : 'limegreen'}`,
+            backgroundColor: `${onlineStatus === 'online' ? 'limegreen' : 'red'}`,
           }}
         >
           &nbsp;
         </div>
-        {onlineStatus === 'offline' ? 'offline' : 'online'}
+        {onlineStatus === 'online' ? 'online' : 'offline'}
       </div>
     </div>
   );

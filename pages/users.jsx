@@ -4,7 +4,7 @@ import Link from 'next/link';
 import UserListItem from '../components/UserListItem';
 import userlist from '../styles/userlist.module.scss';
 
-const Home = ({ users }) => {
+const UserList = ({ users }) => {
   return (
     <>
       <Head>
@@ -28,15 +28,4 @@ const Home = ({ users }) => {
   );
 };
 
-export default Home;
-
-// export async function getServerSideProps() {
-//   const url = 'http://localhost:3000/api/users';
-//   const options = {};
-
-//   return {
-//     props: {
-//       users: await fetchData(url, options),
-//     },
-//   };
-// }
+export default UserList;

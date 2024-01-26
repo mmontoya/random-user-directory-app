@@ -3,18 +3,17 @@ import { useRouter } from 'next/router';
 import usercard from '../styles/usercard.module.scss';
 import userdetail from '../styles/userdetail.module.scss';
 import Link from 'next/link';
-import { fetchData } from '../utils/FetchData';
+import Layout from './layout';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-const SEED = process.env.NEXT_PUBLIC_RANDOM_SEED;
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const UserDetail = ({ users }) => {
+const UserDetail = ({ serverOnlineStatus, users }) => {
   const router = useRouter();
   const id = router.query.id;
   const user = users.filter((user) => user.login.uuid === id)[0];
 
   return (
-    <>
+    <Layout serverOnlineStatus={serverOnlineStatus}>
       <div className={usercard.userDetailContainer}>
         <UserCard user={user} />
       </div>
@@ -23,19 +22,34 @@ const UserDetail = ({ users }) => {
           &lt; back
         </Link>
       </div>
-    </>
+    </Layout>
   );
 };
 
 export default UserDetail;
 
 export async function getServerSideProps() {
-  const url = 'http://localhost:3000/api/users';
-  const options = {}; // You can add headers or other options here
+  try {
+    const url = `${BASE_URL}/api/users`;
+    const response = await fetch(url);
+    const serverStatusHeader = response.headers.get('X-Online-Status');
+    const serverOnlineStatus = serverStatusHeader || 'unknown';
+    const users = await response.json();
 
-  return {
-    props: {
-      users: await fetchData(url, options),
-    },
-  };
+    console.log('Request Online Status Header:', serverStatusHeader);
+
+    return {
+      props: {
+        serverOnlineStatus,
+        users,
+      },
+    };
+  } catch (error) {
+    console.log('Server error getting connectivity');
+    return {
+      props: {
+        serverOnlineStatus: 'unknown',
+      },
+    };
+  }
 }

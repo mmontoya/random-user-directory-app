@@ -70,7 +70,7 @@ The project will run on localhost:3000
 ## Bonus
 
 ### Offline Mode
-I implemented an offline browsing mode by serving a cached version of the query from the Express server, when there is no connectivity. To make it obvious that we are working in an "offline" context, I included a generic image instead of the one that is associated with the online version. I also changed the seed value so that it is a different set of people than when we are online.
+I implemented an offline browsing mode by serving a cached version of the query from the Express server when there is no connectivity. To make it obvious that we are working in an "offline" context, I included a generic image instead of the one that is associated with the online version. I also changed the seed value so that it is a different set of people than when we are online. Please note that in order to test this feature, you will need to be running the app in a local environment. You will then be able to verify that it continues to serve data by disabling your internet connection and refreshing the page.
 
 ## Thank You!
 

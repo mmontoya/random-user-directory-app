@@ -1,13 +1,3 @@
-import offlineusers from '../data/data.json';
-const noavatar = offlineusers.results.map((user) => ({
-  ...user,
-  picture: {
-    large: '/images/generic_user_lg.jpg',
-    medium: '/images/generic_user_md.jpg',
-    thumbnail: '/images/generic_user_thumb.jpg',
-  },
-}));
-
 export const fetchData = async (url, options) => {
   try {
     const response = await fetch(url, options);
