@@ -1,7 +1,8 @@
 # Random Me User Directory
-This project uses the [Random User API](https://random.me) to build a people directory where the user can browse the list of user and get additional details on another page when the user is clicked.
+This project uses the [Random User API](https://random.me) to build a people directory. The user is able to browse a list of people. When an item in the list is clicked, the user is taken to a details page where he can view addtional details.
 
-For added flexibility, it is built with NextJS running inside an Express server. This allows us to take advantage of rending the React components on the server (SSR) while still allowing usto write our own custom route handlers to extend its functionality.
+# SSR (Server Side Rendering)
+This appliction uses Server Side Rendering to serve React page that are pre-rendered on the server.
 
 ## Versioning
 
@@ -53,15 +54,23 @@ The application relies on the following variables to be set in an `.env` file in
 
 The seed can any string,and is used by the api to provide consistent results, which is necessary for the correct functioning of the app.
 
+`NEXT_BASE_URL`=<THE_SERVER_URL> (typically http://localhost:3000)
+
 ### Running & Installation
 
 #### `npm install`
 
-To install all the project dependencies
-
-### Launching the Server
+To install the project dependencies
 
 Once all the dependencies have been successfully downloaded, type:
+
+#### `npm run dev` - for live coding using HMR (Hot Module Replacement)
+
+Alternatively, to build the application bundle:
+
+#### `npm run build`
+
+Then
 
 #### `npm run start`
 
@@ -70,7 +79,7 @@ The project will run on localhost:3000
 ## Bonus
 
 ### Offline Mode
-I implemented an offline browsing mode by serving a cached version of the query from the Express server when there is no connectivity. To make it obvious that we are working in an "offline" context, I included a generic image instead of the one that is associated with the online version. I also changed the seed value so that it is a different set of people than when we are online. Please note that in order to test this feature, you will need to be running the app in a local environment. You will then be able to verify that it continues to serve data by disabling your internet connection and refreshing the page.
+I implemented an offline browsing mode by serving a cached version of the live query that I have saved in a JSON file. To make it obvious that we are working in an "offline" context, I included a generic image instead of the one that is associated with the online version. Please note that in order to test this feature, you will need to be running the app in a local environment. You will then be able to verify that it continues to serve data by disabling your internet connection and _refreshing_ the page.
 
 ## Thank You!
 
