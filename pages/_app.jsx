@@ -1,17 +1,24 @@
 import { useEffect } from 'react';
+import { NextIntlClientProvider } from 'next-intl';
+import { useRouter } from 'next/router';
 
-import Layout from './layout';
-import variables from '../styles/variables.module.scss';
 import '../global.scss';
 
 export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
+  console.log('locale:', router.locale);
   useEffect(() => {
     console.warn = () => {};
   }, []);
 
   return (
-    <Layout color={variables.primaryColor} bgcolor={variables.bgColor}>
+    <NextIntlClientProvider
+      locale={router.locale}
+      timeZone="America/New_York"
+      messages={pageProps.messages}
+    >
       <Component {...pageProps} />
-    </Layout>
+    </NextIntlClientProvider>
   );
 }
