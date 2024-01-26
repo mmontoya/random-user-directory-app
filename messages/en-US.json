@@ -1,0 +1,11 @@
+{
+  "About": {
+    "title": "About us"
+  },
+  "Header": {
+    "title": "Random User Directory"
+  },
+   "UserDetail": {
+    "button": "back"
+  }
+}

@@ -3,12 +3,19 @@ import React from 'react';
 import Layout from './layout';
 import Users from './users';
 
+import variables from '../styles/variables.module.scss';
+
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const HomePage = ({ serverOnlineStatus, users }) => {
   //console.log('Server Status:', serverOnlineStatus);
+
   return (
-    <Layout serverOnlineStatus={serverOnlineStatus}>
+    <Layout
+      color={variables.primaryColor}
+      bgcolor={variables.bgColor}
+      serverOnlineStatus={serverOnlineStatus}
+    >
       <Users users={users} />
     </Layout>
   );
@@ -16,7 +23,7 @@ const HomePage = ({ serverOnlineStatus, users }) => {
 
 export default HomePage;
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ locale }) {
   try {
     const url = `${BASE_URL}/api/users`;
     const response = await fetch(url);
@@ -30,6 +37,7 @@ export async function getServerSideProps() {
       props: {
         serverOnlineStatus,
         users,
+        messages: (await import(`../messages/${locale}.json`)).default,
       },
     };
   } catch (error) {

@@ -4,10 +4,12 @@ import usercard from '../styles/usercard.module.scss';
 import userdetail from '../styles/userdetail.module.scss';
 import Link from 'next/link';
 import Layout from './layout';
+import { useTranslations } from 'next-intl';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const UserDetail = ({ serverOnlineStatus, users }) => {
+const UserDetail = ({ serverOnlineStatus, users, messages }) => {
+  const t = useTranslations('UserDetail');
   const router = useRouter();
   const id = router.query.id;
   const user = users.filter((user) => user.login.uuid === id)[0];
@@ -19,7 +21,7 @@ const UserDetail = ({ serverOnlineStatus, users }) => {
       </div>
       <div style={{ marginTop: '10px' }}>
         <Link className={userdetail.link} href={'/'}>
-          &lt; back
+          &lt; {t('button')}
         </Link>
       </div>
     </Layout>
@@ -28,7 +30,7 @@ const UserDetail = ({ serverOnlineStatus, users }) => {
 
 export default UserDetail;
 
-export async function getServerSideProps() {
+export async function getServerSideProps({ locale }) {
   try {
     const url = `${BASE_URL}/api/users`;
     const response = await fetch(url);
@@ -42,6 +44,7 @@ export async function getServerSideProps() {
       props: {
         serverOnlineStatus,
         users,
+        messages: (await import(`../messages/${locale}.json`)).default,
       },
     };
   } catch (error) {
