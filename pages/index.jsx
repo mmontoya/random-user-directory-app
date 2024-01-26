@@ -1,13 +1,15 @@
 // pages/index.js
 import React from 'react';
 import Layout from './layout';
-import Home from './home';
+import Users from './users';
+
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
 const HomePage = ({ serverOnlineStatus, users }) => {
-  console.log('The status', serverOnlineStatus);
+  //console.log('Server Status:', serverOnlineStatus);
   return (
     <Layout serverOnlineStatus={serverOnlineStatus}>
-      <Home users={users} />
+      <Users users={users} />
     </Layout>
   );
 };
@@ -16,11 +18,13 @@ export default HomePage;
 
 export async function getServerSideProps() {
   try {
-    const response = await fetch('http://localhost:3000/api/users');
+    const url = `${BASE_URL}/api/users`;
+    const response = await fetch(url);
     const serverStatusHeader = response.headers.get('X-Online-Status');
     const serverOnlineStatus = serverStatusHeader || 'unknown';
-
     const users = await response.json();
+
+    console.log('Request Online Status Header:', serverStatusHeader);
 
     return {
       props: {
