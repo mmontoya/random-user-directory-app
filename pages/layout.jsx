@@ -1,5 +1,5 @@
 import React from 'react';
-import page from '../styles/Layout.module.scss';
+import page from '../styles/layout.module.scss';
 import Header from '../components/Header';
 
 const Layout = ({ children, serverOnlineStatus }) => {

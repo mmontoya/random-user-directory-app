@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import Layout from './layout';
-import variables from '../styles/Variables.module.scss';
+import variables from '../styles/variables.module.scss';
 import '../global.scss';
 
 export default function MyApp({ Component, pageProps }) {

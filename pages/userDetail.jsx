@@ -1,7 +1,7 @@
 import UserCard from '../components/UserCard';
 import { useRouter } from 'next/router';
-import usercard from '../styles/Usercard.module.scss';
-import userdetail from '../styles/Userdetail.module.scss';
+import usercard from '../styles/usercard.module.scss';
+import userdetail from '../styles/userdetail.module.scss';
 import Link from 'next/link';
 import Layout from './layout';
 
