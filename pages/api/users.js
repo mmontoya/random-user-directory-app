@@ -23,20 +23,10 @@ export default async function handler(req, res) {
 
     const isOnline = results.status === 'online';
 
-    const response = await fetch(`${BASE_URL}/api/connectivity`);
-    const data = await response.json();
-    const results = data.result;
-
-    //console.log(results);
-
-    const isOnline = results.status === 'online';
-
     //console.log(`we are ${isOnline ? 'online' : 'offlline'}`);
     const page = req.query.page || 1;
 
     console.log('[Users API Server Handler] received request for page: ', page);
-
-    const url = `${API_URL}?results=${PAGE_SIZE}&seed=${SEED}&nat=US&page=${page}`;
     const url = `${API_URL}?results=${PAGE_SIZE}&seed=${SEED}&nat=US&page=${page}`;
 
     if (isOnline) {
