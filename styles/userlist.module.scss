@@ -21,8 +21,8 @@
     align-content: center;
     align-items: left;
     gap: 10px;
-    height: 490px;
-    overflow-y: scroll;;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .userListContainer {
@@ -34,8 +34,8 @@
     align-content: center;
     align-items: left;
     gap: 10px;
-    height: 490px;
-    overflow-y: scroll;
+    max-height: 540px;
+    overflow-y: auto;
 }
 
 .thumbnail {
@@ -59,7 +59,7 @@
         background-color: $color-data-viz-blue-15;
         .name{
             color: #ffffff;
-            background-color: $color-base-signature-shades-slate-grey-500;
+            background-color: $color-active-blue;
         }
         
     }
@@ -82,7 +82,7 @@
     padding-left: 52px;
     margin-top: -5px;
     font-size: .80em;
-    color:$color-data-viz-blue-115;
+    color:$color-active-blue;
 }
 
 

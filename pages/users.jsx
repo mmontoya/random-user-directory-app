@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import UserListItem from '../components/UserListItem';
 import userlist from '../styles/userlist.module.scss';
 
-const UserList = ({ users }) => {
+const UserList = ({ users, page }) => {
+  //console.log('The requested page is: ', page);
+
   return (
     <>
       <Head>
@@ -16,10 +18,10 @@ const UserList = ({ users }) => {
           {users &&
             users.map((user) => (
               <Link
-                href={`/userDetail?id=${user.login.uuid}`}
+                href={`/userDetail?id=${user.login.uuid}&page=${page}`}
                 key={user.login.uuid}
               >
-                <UserListItem user={user} />
+                <UserListItem user={user} page={page} />
               </Link>
             ))}
         </div>

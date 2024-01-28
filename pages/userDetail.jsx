@@ -8,19 +8,27 @@ import { useTranslations } from 'next-intl';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
-const UserDetail = ({ serverOnlineStatus, users, messages }) => {
+const UserDetail = ({ serverOnlineStatus, users }) => {
   const t = useTranslations('UserDetail');
   const router = useRouter();
   const id = router.query.id;
+  const page = router.query.page;
+
   const user = users.filter((user) => user.login.uuid === id)[0];
+
+  //console.log('[User Detail] query params page:', page);
 
   return (
     <Layout serverOnlineStatus={serverOnlineStatus}>
       <div className={usercard.userDetailContainer}>
         <UserCard user={user} />
       </div>
-      <div style={{ marginTop: '10px' }}>
-        <Link className={userdetail.link} href={'/'}>
+      <div style={{ marginTop: '20px' }}>
+        <Link
+          className={userdetail.link}
+          href={`/?page=${page}`}
+          id={'backButton'}
+        >
           &lt; {t('button')}
         </Link>
       </div>
@@ -30,15 +38,26 @@ const UserDetail = ({ serverOnlineStatus, users, messages }) => {
 
 export default UserDetail;
 
-export async function getServerSideProps({ locale }) {
+// TODO: get the page into context
+
+export async function getServerSideProps(req) {
+  const page = req.query.page;
+
+  const { locale } = req;
+
+  //console.log('The page', page);
+
   try {
-    const url = `${BASE_URL}/api/users`;
+    const url = `${BASE_URL}/api/users?page=${page}`;
     const response = await fetch(url);
     const serverStatusHeader = response.headers.get('X-Online-Status');
     const serverOnlineStatus = serverStatusHeader || 'unknown';
     const users = await response.json();
 
-    console.log('Request Online Status Header:', serverStatusHeader);
+    console.log(
+      '[User Detail] Request Online Status Header:',
+      serverStatusHeader
+    );
 
     return {
       props: {

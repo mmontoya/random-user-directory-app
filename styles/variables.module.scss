@@ -274,6 +274,8 @@ $color-master-pane-background: #f5f7fa;
 $color-detail-pane-background: #f5f7fa;
 $color-pane-title: #304b78;
 $color-input-component-label: #405373;
+$color-active-blue:  #4299e1;
+$color-active-blue-lighter:  #71baff;
 
 :export {
   primaryColor: $color-base-signature-slate-grey;
@@ -281,4 +283,6 @@ $color-input-component-label: #405373;
   cardBackground: $card-background;
   primaryText: $color-text;
   userName: $color-base-signature-shades-slate-grey-900;
+  activeBlue: $color-active-blue;
+  activeBlueLighter: $color-active-blue-lighter;
 }
