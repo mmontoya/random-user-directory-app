@@ -4,7 +4,6 @@
  */
 import { getJsonData } from '../../utils/getJsonData';
 //import { checkInternetConnectivity } from '../../utils/checkInternetConnectivity';
-//import { checkInternetConnectivity } from '../../utils/checkInternetConnectivity';
 import { getResolvedPath } from '../../utils/getResolvedPath';
 
 const API_URL = process.env.API_URL;
