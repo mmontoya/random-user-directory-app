@@ -1,11 +1,15 @@
 {
-  "About": {
-    "title": "Sobre nosotros"
-  },
-  "Header": {
-    "title": "Directorio Aleatorio de Usuarios"
-  },
-  "UserDetail": {
-    "button": "regresa"
-  }
+    "locale": "es",
+    "About": {
+        "title": "Sobre nosotros"
+    },
+    "Header": {
+        "title": "Directorio Aleatorio de Usuarios"
+    },
+    "UserDetail": {
+        "button": "regresa"
+    },
+    "Tab": {
+        "title": "Bienvenido al Desafío Amex"
+    }
 }

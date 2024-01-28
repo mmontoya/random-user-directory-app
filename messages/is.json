@@ -1,0 +1,15 @@
+{
+    "locale": "is",
+    "About": {
+        "title": "Um okkur"
+    },
+    "Header": {
+        "title": "Handahófskennd Notendaorðabók"
+    },
+    "UserDetail": {
+        "button": "skila"
+    },
+    "Tab": {
+        "title": "Velkomin í Amex áskorunina"
+    }
+}

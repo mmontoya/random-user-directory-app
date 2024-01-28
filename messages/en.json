@@ -1,11 +1,15 @@
 {
-  "About": {
-    "title": "About us"
-  },
-  "Header": {
-    "title": "Random User Directory"
-  },
-   "UserDetail": {
-    "button": "back"
-  }
+    "locale": "en",
+    "About": {
+        "title": "About us"
+    },
+    "Header": {
+        "title": "Random User Directory"
+    },
+    "UserDetail": {
+        "button": "back"
+    },
+    "Tab": {
+        "title": "Welcome to the Amex Challenge"
+    }
 }

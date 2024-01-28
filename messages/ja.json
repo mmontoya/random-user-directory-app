@@ -1,0 +1,16 @@
+{
+    "locale": "ja",
+    "About": {
+        "title": "私たちについて"
+    },
+    "Header": {
+        "title": "ランダムユーザー辞"
+    },
+    "UserDetail": {
+        "button": "戻る"
+    },
+    "Tab": {
+        "title": "ジへようこそ"
+    }
+
+}

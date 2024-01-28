@@ -1,0 +1,15 @@
+{
+    "locale": "de",
+    "About": {
+        "title": "Über uns"
+    },
+    "Header": {
+        "title": "Zufälliges Benutzerverzeichnis"
+    },
+    "UserDetail": {
+        "button": "zurück"
+    },
+    "Tab": {
+        "title": "Willkommen bei der Amex Challenge"
+    }
+}
