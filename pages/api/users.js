@@ -7,7 +7,7 @@ import { getJsonData } from '../../utils/getJsonData';
 import { getResolvedPath } from '../../utils/getResolvedPath';
 
 const API_URL = process.env.API_URL;
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_URL;
 const SEED = process.env.RANDOM_SEED;
 const PAGE_SIZE = +process.env.NEXT_PUBLIC_PAGE_SIZE || 10;
 
@@ -26,7 +26,6 @@ export default async function handler(req, res) {
     const page = req.query.page || 1;
 
     console.log('[Users API Server Handler] received request for page: ', page);
-
     const url = `${API_URL}?results=${PAGE_SIZE}&seed=${SEED}&nat=US&page=${page}`;
 
     if (isOnline) {

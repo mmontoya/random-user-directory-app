@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Layout from './layout';
 import { useTranslations } from 'next-intl';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_URL;
 
 const UserDetail = ({ serverOnlineStatus, users }) => {
   const t = useTranslations('UserDetail');
@@ -40,10 +40,10 @@ export default UserDetail;
 
 // TODO: get the page into context
 
-export async function getServerSideProps(req) {
-  const page = req.query.page;
+export async function getServerSideProps(context) {
+  const page = context.query.page;
 
-  const { locale } = req;
+  const { locale } = context;
 
   //console.log('The page', page);
 

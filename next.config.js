@@ -1,5 +1,9 @@
 import path, { join } from 'path';
+import dotenvExpand from 'dotenv-expand';
+
 const __dirname = path.resolve();
+
+dotenvExpand.expand({ parsed: { ...process.env } });
 
 export const sassOptions = {
   includePaths: [join(__dirname, 'styles')],
