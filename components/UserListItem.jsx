@@ -1,5 +1,7 @@
 import userlist from '../styles/userlist.module.scss';
-const UserListItem = ({ user, clickHandler }) => {
+const UserListItem = ({ user, clickHandler, page }) => {
+  //console.log('[UserListItem] page:', page);
+
   return (
     <div className={userlist.userContainer} onClick={clickHandler}>
       <div className={userlist.firstRow}>

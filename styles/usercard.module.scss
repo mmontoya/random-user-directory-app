@@ -1,9 +1,9 @@
-@import "../styles/variables.module.scss";
+@import "./variables.module.scss";
 
 
 .displayCardContainer {
     display: flex;
-    background-color: $color-base-signature-shades-slate-grey-600;
+    background-color: $color-base-signature-shades-slate-grey-700;
     padding: 20px;
     border-radius: 20px;
     flex-direction: column;
@@ -20,7 +20,7 @@
     border-radius: 12px;
     width: 160px;
     height: 160px;
-    border: 1px rgba(255, 255, 255, 0.309) solid;
+    border: 1px rgba(255, 255, 255, 0.3) solid;
 }
 
 .firstRow {

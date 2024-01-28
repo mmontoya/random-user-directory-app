@@ -6,15 +6,20 @@ import { getJsonData } from '../../utils/getJsonData';
 import { checkInternetConnectivity } from '../../utils/checkInternetConnectivity';
 import { getResolvedPath } from '../../utils/getResolvedPath';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-const SEED = process.env.NEXT_PUBLIC_RANDOM_SEED;
+const BASE_URL = process.env.API_URL;
+const SEED = process.env.RANDOM_SEED;
+const PAGE_SIZE = +process.env.NEXT_PUBLIC_PAGE_SIZE || 10;
 
 export default async function handler(req, res) {
   try {
     // Check if the server has internet connectivity
     const isOnline = await checkInternetConnectivity();
     //console.log(`we are ${isOnline ? 'online' : 'offlline'}`);
-    const url = `${BASE_URL}?results=10&seed=${SEED}&nat=US`;
+    const page = req.query.page || 1;
+
+    console.log('[Users API Server Handler] received request for page: ', page);
+
+    const url = `${BASE_URL}?results=${PAGE_SIZE}&seed=${SEED}&nat=US&page=${page}`;
 
     if (isOnline) {
       const response = await fetch(url);
