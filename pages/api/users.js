@@ -7,7 +7,7 @@ import { getJsonData } from '../../utils/getJsonData';
 import { getResolvedPath } from '../../utils/getResolvedPath';
 
 const API_URL = process.env.API_URL;
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_URL;
 const SEED = process.env.RANDOM_SEED;
 const PAGE_SIZE = +process.env.NEXT_PUBLIC_PAGE_SIZE || 10;
 

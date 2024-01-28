@@ -2,7 +2,7 @@ import Layout from './layout';
 import UserDisplay from '../components/UserDisplay';
 import variables from '../styles/variables.module.scss';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_URL;
 
 const Home = ({ serverOnlineStatus, users, indexPage }) => {
   return (
@@ -23,7 +23,7 @@ const Home = ({ serverOnlineStatus, users, indexPage }) => {
 export default Home;
 
 export async function getServerSideProps(context) {
-  const { locale } = context;
+  const { locale, messages } = context;
   const page = context.query.page || 1;
 
   const indexPage = page;
@@ -42,7 +42,7 @@ export async function getServerSideProps(context) {
       serverStatusHeader
     );
 
-    // While not used by <Home /> messages are required by the header
+    // While not used by <Home />, messages are required by the Header component
     return {
       props: {
         serverOnlineStatus,

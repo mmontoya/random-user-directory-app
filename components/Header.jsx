@@ -8,9 +8,9 @@ const Header = (props) => {
   const { onlineStatus } = props;
   const g = useTranslations();
   const t = useTranslations('Header');
-  const locale = g('locale');
+  const locale = g('locale') || 'en';
 
-  console.log('Locale is: ', locale);
+  console.log('[Header] locale is: ', locale);
 
   return (
     <div className={header.main}>

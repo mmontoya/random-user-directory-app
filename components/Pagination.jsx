@@ -2,7 +2,7 @@ import React from 'react';
 import pagination from '../styles/pagination.module.scss'; // Import your CSS file
 import { fetchData } from '../utils/FetchData';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
+const BASE_URL = process.env.NEXT_PUBLIC_URL;
 
 const EndLeftSVGIcon = () => (
   <svg
