@@ -1,60 +1,30 @@
-// pages/index.js
-import React, { useState } from 'react';
 import Layout from './layout';
-import Users from './users';
-import Pagination from '../components/Pagination';
-
+import UserDisplay from '../components/UserDisplay';
 import variables from '../styles/variables.module.scss';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-const PAGE_SIZE = +process.env.NEXT_PUBLIC_PAGE_SIZE || 10;
-const BUTTON_MAX = process.env.NEXT_PUBLIC_PAGINATION_NUM_BUTTONS || 5;
-const TOTAL_RECORDS = process.env.NEXT_PUBLIC_USER_RECORDS_TOTAL || 200;
 
-const HomePage = ({ serverOnlineStatus, users, indexPage }) => {
-  console.log('Server Status:', serverOnlineStatus);
-  const [page, setPage] = useState(indexPage || 1);
-  const [data, setData] = useState(users);
-
-  const limit = +PAGE_SIZE; // how many records per page?
-  const buttonMax = +BUTTON_MAX; // how many buttons on the paginator to display?
-  const count = +TOTAL_RECORDS; // how many toral records to retrieve
-
-  const totalPages = Math.ceil(count / limit);
-  // check if we really need all the buttons?
-  const numPagesToDisplay = totalPages > buttonMax ? buttonMax : totalPages;
-
-  //console.log('The page is', page);
-  //console.log('The users are:', data);
-
+const Home = ({ serverOnlineStatus, users, indexPage }) => {
   return (
     <Layout
       color={variables.primaryColor}
       bgcolor={variables.bgColor}
       serverOnlineStatus={serverOnlineStatus}
     >
-      <Users users={data} page={page} />
-
-      {serverOnlineStatus == 'online' && (
-        <Pagination
-          pageNum={page}
-          limit={limit}
-          count={count}
-          totalPages={totalPages}
-          numPagesToDisplay={numPagesToDisplay}
-          setPage={setPage}
-          setData={setData}
-        />
-      )}
+      <UserDisplay
+        users={users}
+        indexPage={indexPage}
+        serverOnlineStatus={serverOnlineStatus}
+      />
     </Layout>
   );
 };
 
-export default HomePage;
+export default Home;
 
-export async function getServerSideProps(req) {
-  const { locale } = req;
-  const page = req.query.page || 1;
+export async function getServerSideProps(context) {
+  const { locale } = context;
+  const page = context.query.page || 1;
 
   const indexPage = page;
 
@@ -72,6 +42,7 @@ export async function getServerSideProps(req) {
       serverStatusHeader
     );
 
+    // While not used by <Home /> messages are required by the header
     return {
       props: {
         serverOnlineStatus,

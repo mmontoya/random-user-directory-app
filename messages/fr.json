@@ -1,0 +1,15 @@
+{
+    "locale": "fr",
+    "About": {
+        "title": "À propos de nous"
+    },
+    "Header": {
+        "title": "Dictionnaire utilisateur aléatoire"
+    },
+    "UserDetail": {
+        "button": "retour"
+    },
+    "Tab": {
+        "title": "Bienvenue au défi Amex"
+    }
+}

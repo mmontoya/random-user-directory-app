@@ -21,12 +21,17 @@
   font-family: "Core Sans C Bold Italic";
 }
 
+.flag {
+  margin-left: auto;
+  padding-top: 3px;
+  margin-right: 10px;
+}
+
 .status {
     display: flex;
     align-items: center;
     justify-content: center;
     align-content: center;
-    margin-left: auto;
     margin-right: 10px;
     padding: 8px 10px;
     font-size: .70em;

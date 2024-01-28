@@ -1,16 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import UserListItem from '../components/UserListItem';
+import UserListItem from './UserListItem';
 import userlist from '../styles/userlist.module.scss';
+import { useTranslations } from 'next-intl';
 
 const UserList = ({ users, page }) => {
   //console.log('The requested page is: ', page);
 
+  const t = useTranslations('Tab');
+
   return (
     <>
       <Head>
-        <title>Amex User Directory</title>
+        <title>{t('title')}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>

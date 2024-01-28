@@ -6,14 +6,7 @@ export const sassOptions = {
 };
 
 export const i18n = {
-  locales: ['default', 'en', 'es'],
+  locales: ['default', 'en', 'es', 'it', 'de', 'ja', 'nl', 'pt', 'fr', 'is'],
   defaultLocale: 'default',
   localeDetection: false,
 };
-export async function exportPathMap() {
-  return {
-    '/': { page: '/index' },
-    '/home': { page: '/home' },
-    'user-detail': { page: '/userDetail' },
-  };
-}

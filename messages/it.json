@@ -1,0 +1,15 @@
+{
+    "locale": "it",
+    "About": {
+        "title": "Chi siamo"
+    },
+    "Header": {
+        "title": "Dizionario Utente Aleatorio"
+    },
+    "UserDetail": {
+        "button": "indietro"
+    },
+    "Tab": {
+        "title": "Benvenuti all'Amex Challenge"
+    }
+}

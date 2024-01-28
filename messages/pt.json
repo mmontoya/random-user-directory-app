@@ -1,0 +1,15 @@
+{
+    "locale": "pt",
+    "About": {
+        "title": "Sobre nós"
+    },
+    "Header": {
+        "title": "Diretório de usuários aleatórios"
+    },
+    "UserDetail": {
+        "button": "retornar"
+    },
+    "Tab": {
+        "title": "Bem-vindo ao Desafio Amex"
+    }
+}

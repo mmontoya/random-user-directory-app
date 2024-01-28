@@ -97,16 +97,20 @@ I implemented an offline browsing mode by serving a cached version of the users 
 
 ### Internationalization (i18n)
 
-I implemented internationalization capabilites, adding support for Spanish. To see it in action, simply append the locale for Spanish ("es") to the end of the URL (before any parameters). The title on the Header bar as well as the "back" button, should be translated to Spanish.
+I implemented internationalization capabilites, adding support for German, Spanish, French, Icelandic, Italian, Japanese, Dutch, and Portuguese. To see it in action, simply append the locale for any of the above (`de`, `es`, `fr`, `is`, `it`, `ja`, `nl`, `pt`) to the end of the URL (before the parameters). The title on the Tab, Header bar as well as the "back" button, should be translated to the chosen language.
 
 ### Pagination
 
 I have added pagination support that can accomodate an arbitrary size of total user records. Simply change the `.env` value for `NEXT_PUBLIC_USER_RECORDS_TOTAL` to the desired size in combination with `NEXT_PUBLIC_PAGE_SIZE` (the number of users per page). The paginator will dynamically adjust to these values.
 
-## Thank You!
+### Future Exploration
 
-Thank you for taking the time to review my submission! I had a lot of fun putting this together. It was a thoroughly enjoyable challenge with many creative possibilities for enhacements. For example, I would love to attempt to put together an experimental UI that features a vintage Rolodex as the UI (see image below). The user would then be able to use the scroll wheel to flip through the cards. While perhaps not as efficient as the featured UI, it would have novelty appeal that could be fun an tactile with a whimsical nod at the real world technology is has replaced.
+This was a thoroughly enjoyable challenge with many creative possibilities. One idea that I would like to pursue on my own would be to attempt to present the people directory in the bygone form of a Rolodex (see image below). The user would then be able to use the scroll wheel to flip through the cards. While perhaps not as efficient as the featured UI, it would have novelty appeal that could be fun an tactile with a whimsical nod at the real world technology computers have replaced. This could be achieved with CSS 3D transforms.
 
 <img src="./assets/images/rolodex2.jpg" width="400" style= "border-radius: 20px; border: 40px solid white" >
+
+## Thank You!
+
+Thank you for taking the time to review my submission! I had a lot of fun putting this together! 
 
 
