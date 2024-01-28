@@ -103,11 +103,15 @@ I implemented internationalization capabilites, adding support for German, Spani
 
 I have added pagination support that can accomodate an arbitrary size of total user records. Simply change the `.env` value for `NEXT_PUBLIC_USER_RECORDS_TOTAL` to the desired size in combination with `NEXT_PUBLIC_PAGE_SIZE` (the number of users per page). The paginator will dynamically adjust to these values.
 
+### Lighthouse Scores for Performance and Accessibility
+<img src="./assets/images/LightHouseReport.png" />
+(These were for an optimized production build).
+
 ### Future Exploration
 
 This was a thoroughly enjoyable challenge with many creative possibilities. One idea that I would like to pursue on my own would be to attempt to present the people directory in the bygone form of a Rolodex (see image below). The user would then be able to use the scroll wheel to flip through the cards. While perhaps not as efficient as the featured UI, it would have novelty appeal that could be fun an tactile with a whimsical nod at the real world technology computers have replaced. This could be achieved with CSS 3D transforms.
 
-<img src="./assets/images/rolodex2.jpg" width="400" style= "border-radius: 20px; border: 40px solid white" >
+<img src="./assets/images/rolodex.jpg" width="400" style= "border-radius: 20px; border: 40px solid white" >
 
 ## Thank You!
 

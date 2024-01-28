@@ -26,7 +26,7 @@ const Header = (props) => {
         <Image
           src={`/${locale}/images/flag.png`}
           alt="flag icon"
-          height={20}
+          height={22}
           width={30}
         />
       </div>
@@ -46,3 +46,11 @@ const Header = (props) => {
 };
 
 export default Header;
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      messages: (await import(`../messages/${locale}.json`)).default,
+    },
+  };
+}

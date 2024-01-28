@@ -127,6 +127,9 @@ const Pagination = ({
           <ul className={pagination.navList}>
             <li>
               <button
+                type="button"
+                id="returnToStart"
+                aria-label="return to start"
                 onClick={(e) => handleClick(e, 1)}
                 className={`${pagination.pageButton} ${pagination.pageButtonFirst}`}
               >
@@ -137,6 +140,9 @@ const Pagination = ({
             {hasPrevious && (
               <li>
                 <button
+                  type="button"
+                  id="navigateToPreviousPage"
+                  aria-label="return to previous page"
                   onClick={(e) => handleClick(e, startPage - 1)}
                   className={pagination.pageButton}
                 >
@@ -152,6 +158,9 @@ const Pagination = ({
             ).map((page) => (
               <li key={page}>
                 <button
+                  type="button"
+                  id={`navigateToSelectedPage_${page}`}
+                  aria-label={`go to page${page}`}
                   onClick={(e) => handleClick(e, page)}
                   href={`/api/users?page=${page}`}
                   className={
@@ -168,6 +177,9 @@ const Pagination = ({
             {hasNext && (
               <li>
                 <button
+                  type="button"
+                  id="navigateToNextPage"
+                  aria-label="advance to next page"
                   onClick={(e) => handleClick(e, endPage + 1)}
                   className={pagination.pageButton}
                 >
@@ -179,6 +191,9 @@ const Pagination = ({
 
             <li>
               <button
+                type="button"
+                id="goToEnd"
+                aria-label="go to last page"
                 onClick={(e) => handleClick(e, totalPages)}
                 className={`${pagination.pageButton} ${pagination.pageButtonLast}`}
               >
