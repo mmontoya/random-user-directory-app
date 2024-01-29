@@ -38,8 +38,6 @@ const UserDetail = ({ serverOnlineStatus, users }) => {
 
 export default UserDetail;
 
-// TODO: get the page into context
-
 export async function getServerSideProps(req) {
   const page = req.query.page;
 
