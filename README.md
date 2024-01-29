@@ -47,6 +47,8 @@ The application relies on the following variables to be set in an `.env` file in
 
 `API_URL`=https://randomuser.me/api
 
+`BASE_URL`="https://localhost:3000"
+
 `RANDOM_SEED`=<SEED_VALUE>
 
 The seed can any string with alpha values and is used by the api to provide consistent result necessary for the correct functioning of the app. Modifying this value will initialize the app with a different set of users.
@@ -106,6 +108,17 @@ I have added pagination support that can accomodate an arbitrary size of total u
 ### Lighthouse Scores for Performance and Accessibility
 <img src="./assets/images/LightHouseReport.png" />
 (These were for an optimized production build).
+
+### Known Issues
+
+#### Build Errors
+
+The Internationalization Library (next-intl), will complain about missing MESSAGES during the build process. This is a known issues because it does not yet have full support for integrating with React SSR. You can safely ignore these messages and the build will nevertheless succeed.
+
+#### Offline Mode Slow
+
+The offline mode is slow. This is due to the naive approach of loading the cached JSON file and scanning all 200 entries for one with the selected user's ID. Additionally, there is the check for internet connectivity, which relies on DNS resolution which is also slow. Addionally the JOSN file is read twice, once when the list of users is rendered and again, when the detail is requested. While this can be optimized, I chose to investing in supporting additional features rather than getting bogged down with optimization. The current implementation servers more as a proof of concept. While I have used RTK (React Toolkit) in the past to cache client-side Redux-bound state, a better server-side solution would be to use a lightweight database such as SQLite to store records for fast retrieval. This would also work well with pagination.
+
 
 ### Future Exploration
 
