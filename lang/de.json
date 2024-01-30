@@ -7,7 +7,8 @@
         "title": "Zufälliges Benutzerverzeichnis"
     },
     "UserDetail": {
-        "button": "zurück"
+        "button": "zurück",
+        "user": "Benutzer"
     },
     "Tab": {
         "title": "Willkommen bei der Amex Challenge"

@@ -1,4 +1,4 @@
-import userlist from '../styles/userlist.module.scss';
+import userlist from '../styles/Userlist.module.scss';
 const UserListItem = ({ user, clickHandler, page }) => {
   //console.log('[UserListItem] page:', page);
 

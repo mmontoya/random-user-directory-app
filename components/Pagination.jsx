@@ -1,5 +1,5 @@
 import React from 'react';
-import pagination from '../styles/pagination.module.scss'; // Import your CSS file
+import pagination from '../styles/Pagination.module.scss';
 import { fetchData } from '../utils/fetchData';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;

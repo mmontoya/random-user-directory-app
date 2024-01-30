@@ -7,7 +7,8 @@
         "title": "Directorio Aleatorio de Usuarios"
     },
     "UserDetail": {
-        "button": "regresa"
+        "button": "regresa",
+        "user": "usuario"
     },
     "Tab": {
         "title": "Bienvenido al Desafío Amex"

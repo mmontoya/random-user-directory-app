@@ -7,7 +7,8 @@
         "title": "Willekeurige gebruikerslijst"
     },
     "UserDetail": {
-        "button": "opbrengst"
+        "button": "opbrengst",
+        "user": "gebruiker"
     },
     "Tab": {
         "title": "Welkom bij de Amex-uitdaging"

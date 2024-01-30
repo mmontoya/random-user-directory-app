@@ -1,10 +1,11 @@
 import UserCard from '../components/UserCard';
 import { useRouter } from 'next/router';
-import usercard from '../styles/usercard.module.scss';
-import userdetail from '../styles/userdetail.module.scss';
+import usercard from '../styles/Usercard.module.scss';
+import userdetail from '../styles/Userdetail.module.scss';
 import Link from 'next/link';
 import Layout from './layout';
 import { useTranslations } from 'next-intl';
+import Head from 'next/head';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -20,6 +21,10 @@ const UserDetail = ({ serverOnlineStatus, users }) => {
 
   return (
     <Layout serverOnlineStatus={serverOnlineStatus}>
+      <Head>
+        <title>{`${t('user')}: ${user.name.first} ${user.name.last}`}</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <div className={usercard.userDetailContainer}>
         <UserCard user={user} />
       </div>
@@ -61,7 +66,7 @@ export async function getServerSideProps(req) {
       props: {
         serverOnlineStatus,
         users,
-        messages: (await import(`../messages/${locale}.json`)).default,
+        messages: (await import(`../lang/${locale}.json`)).default,
       },
     };
   } catch (error) {
