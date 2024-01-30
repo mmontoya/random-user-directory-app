@@ -1,7 +1,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { useRouter } from 'next/router';
 
-import '../global.scss';
+import './globals.scss';
 
 export default function MyApp({ Component, pageProps }) {
   const router = useRouter();

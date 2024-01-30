@@ -1,4 +1,4 @@
-import header from '../styles/header.module.scss';
+import header from '../styles/Header.module.scss';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
@@ -50,7 +50,7 @@ export default Header;
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      messages: (await import(`../messages/${locale}.json`)).default,
+      messages: (await import(`../lang/${locale}.json`)).default,
     },
   };
 }

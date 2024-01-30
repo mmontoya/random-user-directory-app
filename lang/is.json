@@ -7,7 +7,8 @@
         "title": "Handahófskennd Notendaorðabók"
     },
     "UserDetail": {
-        "button": "skila"
+        "button": "skila",
+        "user": "notandi"
     },
     "Tab": {
         "title": "Velkomin í Amex áskorunina"

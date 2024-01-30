@@ -1,5 +1,5 @@
 import React from 'react';
-import users from '../styles/usercard.module.scss';
+import users from '../styles/Usercard.module.scss';
 
 const Address = ({ address }) => {
   return (

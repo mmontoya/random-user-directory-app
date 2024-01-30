@@ -1,6 +1,6 @@
 import Layout from './layout';
 import UserDisplay from '../components/UserDisplay';
-import variables from '../styles/variables.module.scss';
+import variables from '../styles/Variables.module.scss';
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -47,7 +47,7 @@ export async function getServerSideProps(context) {
       props: {
         serverOnlineStatus,
         users,
-        messages: (await import(`../messages/${locale}.json`)).default,
+        messages: (await import(`../lang/${locale}.json`)).default,
         indexPage,
       },
     };
