@@ -99,7 +99,7 @@ I implemented an offline browsing mode by serving a cached version of the users 
 
 ### Internationalization (i18n)
 
-I implemented internationalization capabilites, adding support for German, Spanish, French, Icelandic, Italian, Japanese, Dutch, and Portuguese. To see it in action, simply append the locale for any of the above (`de`, `es`, `fr`, `is`, `it`, `ja`, `nl`, `pt`) to the end of the URL (before the parameters). The title on the Tab, Header bar as well as the "back" button, should be translated to the chosen language.
+I implemented internationalization capabilites, adding support for German, Spanish, French, Icelandic, Italian, Japanese, Dutch, and Portuguese. To see it in action, simply append the locale for any of the above (`de`, `es`, `fr`, `is`, `it`, `ja`, `nl`, `pt`) to the end of the URL (before the parameters). The title on the Tab, Header bar, 404 and 500 Errors as well as the "back" button, should be translated to the language for the appropriate locale. Append a page to the URL that doesn't exist such as "/hello" to cause the broser to display the internationalized error message.
 
 ### Pagination
 
