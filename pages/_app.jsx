@@ -14,7 +14,7 @@ export default function MyApp(props) {
       timeZone="America/New_York"
       messages={pageProps.messages}
       onError={(error) => {
-        console.log('Missing message:', error);
+        //console.log('');
       }}
     >
       <Component {...pageProps} />

@@ -10,7 +10,7 @@ const Header = (props) => {
   const t = useTranslations('Header');
   const locale = g('locale');
 
-  console.log('Locale is: ', locale);
+  //console.log('Locale is: ', locale);
 
   return (
     <div className={header.main}>
