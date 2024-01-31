@@ -12,5 +12,9 @@
     },
     "Tab": {
         "title": "Velkomin í Amex áskorunina"
+    },
+    "Error": {
+        "404": "síða ekki fundin",
+        "500": "Innri netþjónsvilla"
     }
 }

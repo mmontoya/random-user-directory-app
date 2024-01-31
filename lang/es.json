@@ -12,5 +12,9 @@
     },
     "Tab": {
         "title": "Bienvenido al Desafío Amex"
+    },
+    "Error": {
+        "404": "La página no se encuentra",
+        "500": "Error Interno del Servidor"
     }
 }

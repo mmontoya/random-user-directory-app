@@ -8,9 +8,13 @@
     },
     "UserDetail": {
         "button": "zurück",
-        "user": "Benutzer"
+        "user": "benutzer"
     },
     "Tab": {
         "title": "Willkommen bei der Amex Challenge"
+    },
+    "Error": {
+        "404": "Seite nicht gefunden",
+        "500": "Interner Serverfehler"
     }
 }

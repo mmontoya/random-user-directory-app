@@ -48,6 +48,7 @@ const Header = (props) => {
 export default Header;
 
 export async function getStaticProps({ locale }) {
+  //console.log(`Building slug: ${slug}`);
   return {
     props: {
       messages: (await import(`../lang/${locale}.json`)).default,

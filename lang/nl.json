@@ -12,5 +12,9 @@
     },
     "Tab": {
         "title": "Welkom bij de Amex-uitdaging"
+    },
+     "Error": {
+        "404": "Pagina niet gevonden",
+        "500": "Interne Server Fout"
     }
 }

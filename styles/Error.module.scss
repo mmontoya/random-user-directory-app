@@ -1,0 +1,32 @@
+.errorContainer {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  align-content: center;
+}
+
+.errorMessage {
+    display: flex;
+    align-items: center;
+}
+
+.separator{
+    font-size: 3rem;
+    height: 50px;
+    border-right: 1px solid black;
+    padding: 5px;
+}
+
+.errorText {
+    font-weight: normal;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    color: #5d5d5d
+}
+
+
+.errorCode {
+    font-size: 2rem;
+    font-weight: bold;
+}

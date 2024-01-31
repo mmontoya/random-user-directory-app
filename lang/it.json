@@ -12,5 +12,9 @@
     },
     "Tab": {
         "title": "Benvenuti all'Amex Challenge"
+    },
+    "Error": {
+        "404": "Pagina non trovata",
+        "500": "Errore interno del server"
     }
 }
