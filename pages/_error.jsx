@@ -1,10 +1,15 @@
+import ErrorComponent from '../components/Error';
+
 function Error({ statusCode }) {
+  const errorMessage = statusCode
+    ? 'An error occurred on the server'
+    : 'An error occurred on the client';
+
   return (
-    <p>
-      {statusCode
-        ? `An error ${statusCode} occurred on server`
-        : 'An error occurred on client'}
-    </p>
+    <ErrorComponent
+      errorCode={statusCode}
+      errorMessage={errorMessage}
+    ></ErrorComponent>
   );
 }
 
