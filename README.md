@@ -95,7 +95,7 @@ The project will run on localhost:3000 but with the precompiled bundles for rele
 ## Bonus Features
 
 ### Offline Mode
-I implemented an offline browsing mode by serving a cached version of the users that I have saved in a JSON file. To make it obvious that we are working in an `offline` context, I included a generic image of the profile pixture instead of the one that is associated with the online version. Please note that in order to test this feature, you will need to be running the app locally so that you can disable access to the internet. You will then be able verify that it continues to serve data when you _refresh_ the page.
+I implemented an offline browsing mode by serving a cached version of the users that I have saved in a JSON file. To make it obvious that we are working in an `offline` context, I included a generic image of the profile picture instead of the one that is associated with the online version. Please note that in order to test this feature, you will need to be running the app locally so that you can disable access to the internet. You will then be able verify that it continues to serve data when you _refresh_ the page.
 
 ### Internationalization (i18n)
 
@@ -113,7 +113,7 @@ I have added pagination support that can accomodate an arbitrary size of total u
 
 #### Offline Mode Slow
 
-The offline mode is slow. This is due to the naive approach of loading the cached JSON file and scanning all 200 entries for one with the selected user's ID. Additionally, there is the check for internet connectivity, which relies on DNS resolution which is also slow. Addionally the JOSN file is read twice, once when the list of users is rendered and again, when the detail is requested. While this can be optimized, I chose to investing in supporting additional features rather than getting bogged down with optimization. The current implementation servers more as a proof of concept. While I have used RTK (React Toolkit) in the past to cache client-side Redux-bound state, a better server-side solution would be to use a lightweight database such as SQLite to store records for fast retrieval. This would also work well with pagination.
+The offline mode is slow. This is due to the naive approach of loading the cached JSON file and scanning all 200 entries for one with the selected user's ID. Additionally, there is the check for internet connectivity, which relies on DNS resolution which is also slow. Additionally the JSON file is read twice, once when the list of users is rendered, and again when the detail is requested. While this can be optimized, I chose to invest in supporting additional features rather than getting bogged down with optimization. The current implementation serves more as a proof of concept. While I have used RTK (React Toolkit) in the past to cache client-side Redux-bound state, a better server-side solution would be to use a lightweight database such as SQLite to store records for fast retrieval. This would also work well with pagination.
 
 
 ### Future Exploration
